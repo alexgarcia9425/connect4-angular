@@ -1,0 +1,61 @@
+@import "../bower_components/bootstrap/less/variables.less";
+
+@player1Color: red;
+@player2color: yellow;
+@emptyColor: white;
+@boardColor: blue;
+@boardSmWidth:50%;
+@boardMobileWidth: 90%;
+@discDiamenter: 25px;
+@discSmDiamenter: 40px;
+
+.player_1 {
+	color: @player1Color;
+}
+
+.player_2 {
+	color: @player2color;
+}
+.connect4-board {
+	background-color: @boardColor;
+	padding: 20px 10px 20px 10px;
+	width: @boardMobileWidth;
+
+	.discs {
+		/* round it */
+		border-radius: 50%;
+		/*IE-8*/
+	    behavior: url(PIE.htc); 
+	    /* size */
+	    width: @discDiamenter;
+	    height: @discDiamenter;
+	    /* center */
+	    margin: auto;
+	}	
+
+	.disc_wrapper {
+		padding: 2px;
+		width: 14.185771%;
+	}
+
+	.disc_empty {
+		background-color: @emptyColor;
+	}
+
+	.disc_1 {
+		background-color: @player1Color;
+	}
+
+	.disc_2 {
+		background-color: @player2color;
+	}
+    @media(min-width: @screen-sm-min){
+		width: @boardSmWidth;
+		.discs {
+			border-radius: 50%;
+		    width: @discSmDiamenter;
+		    height: @discSmDiamenter;
+		}	
+
+    }
+}

@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row">
+		<h3 class="player_{{vm.player}}">
+			Player {{vm.player}}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="connect4-board container">
+		<connect4-board-row ng-repeat="rowNumber in [5,4,3,2,1,0]" board="vm.board" row="rowNumber"></connect4-board-row>
+
+		<connect4-buttons-row board="vm.board"></connect4-buttons-row>
+	</div>	
+</div>
+<!-- TODO: move to a component -->
+<div class="container">
+	<div class="row disc_wrapper">
+		<div class='col-xs-4 col-xs-offset-4 text-center'>
+			<button type="button btn-xs" ng-click="vm.resetBoard()" class="btn btn-primary reset_button">
+			  Reset board
+			</button>
+		</div>
+		
+	</div>
+</div>
